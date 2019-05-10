@@ -4,6 +4,7 @@ import { Link, Route, NavLink } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
+import PrivateRoute from "./components/PrivateRoute";
 
 class App extends React.Component {
   constructor() {
@@ -21,8 +22,8 @@ class App extends React.Component {
       <div className="App">
         <ul className="navbar">
           <li>
-            <NavLink to="/" exact activeClassName="activeNavButton">
-              HOME
+            <NavLink to="/members" exact activeClassName="activeNavButton">
+              Members Only
             </NavLink>
           </li>
           <li>
@@ -43,9 +44,9 @@ class App extends React.Component {
         <h3>
           Not Registered? Aw, Geez! Register <Link to="/register">Here</Link>
         </h3> */}
-        <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <PrivateRoute path="/members" component={Home} />
       </div>
     );
   }
