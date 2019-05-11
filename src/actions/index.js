@@ -19,8 +19,11 @@ export const register = creds => dispatch => {
 // this is the action creator
 export const login = creds => dispatch => {
   dispatch({ type: LOGIN_START });
-  axios
+  return axios
     .post("https://simpson-says-backend.herokuapp.com/api/Login", creds)
-    .then(res => console.log(res))
+    .then(res => {
+      localStorage.setItem("token", res.data.token);
+      dispatch({ type: LOGIN_SUCCESS, payload: res.data.token });
+    })
     .catch(err => console.log(err));
 };
