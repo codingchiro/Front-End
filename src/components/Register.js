@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import { register } from "../actions";
-import Footer from "./Footer";
 
 class Register extends React.Component {
   constructor() {
@@ -10,7 +9,7 @@ class Register extends React.Component {
       credentials: {
         username: "",
         password: "",
-        role: "user"
+        role: ""
       }
     };
   }

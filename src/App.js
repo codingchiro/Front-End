@@ -31,9 +31,7 @@ class App extends React.Component {
               <a href="https://codingchiro.github.io/Simpson-Says/index.html">
                 Home
               </a>
-              <Link to="https://vigorous-mcclintock-bf9e4a.netlify.com/login">
-                Login In
-              </Link>
+              <Link to="/login">Login In</Link>
               <a href="https://codingchiro.github.io/Simpson-Says/aboutus.html">
                 About Us
               </a>
