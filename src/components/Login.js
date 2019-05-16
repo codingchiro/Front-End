@@ -32,9 +32,9 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="login">
         <h1>Don't have a cow, man!</h1>
-        <h4>Enter your USERNAME and PASSWORD to Login</h4>
+        {/* <h4>Enter your USERNAME and PASSWORD to Login</h4> */}
         <form onSubmit={this.login}>
           <input
             type="text"

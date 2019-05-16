@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { register } from "../actions";
+import Footer from "./Footer";
 
 class Register extends React.Component {
   constructor() {
@@ -31,7 +32,7 @@ class Register extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="login">
         <h1>Ay, caramba!</h1>
         <h4>Enter your USERNAME and PASSWORD to register</h4>
         <form onSubmit={this.register}>
@@ -51,6 +52,7 @@ class Register extends React.Component {
           />
           <button>Click here to register, Man!</button>
         </form>
+        {/* <Footer /> */}
       </div>
     );
   }

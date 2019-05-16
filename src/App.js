@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
 import PrivateRoute from "./components/PrivateRoute";
+import Footer from "./components/Footer";
 
 class App extends React.Component {
   constructor() {
@@ -20,7 +21,30 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <ul className="navbar">
+        <div class="nav-container">
+          <div class="nav-content">
+            <div class="logo">
+              <h1 class="animated logo">Simpson Says</h1>
+            </div>
+
+            <nav>
+              <a href="https://codingchiro.github.io/Simpson-Says/index.html">
+                Home
+              </a>
+              <a href="https://codingchiro.github.io/Simpson-Says/login.html">
+                Login In
+              </a>
+              <a href="https://codingchiro.github.io/Simpson-Says/aboutus.html">
+                About Us
+              </a>
+              <a href="#">Sign Up</a>
+            </nav>
+            {/* <!-- end nav --> */}
+          </div>
+          {/* <!-- end nav-content--> */}
+        </div>
+        {/* <!-- end nav-container --> */}
+        {/* <ul className="navbar">
           <li>
             <NavLink to="/members" exact activeClassName="activeNavButton">
               Members Only
@@ -36,7 +60,7 @@ class App extends React.Component {
               Sign Up
             </NavLink>
           </li>
-        </ul>
+        </ul> */}
 
         {/* <h3>
           Don't have a cow, man! <Link to="/login">Login</Link>
@@ -47,6 +71,7 @@ class App extends React.Component {
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <PrivateRoute path="/members" component={Home} />
+        <Footer />
       </div>
     );
   }

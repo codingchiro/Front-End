@@ -21,17 +21,72 @@ body {
   padding: 0;
   height: 100%;
   color: #fff;
-  background-color: #3ac8ff;
+  background: url("https://codingchiro.github.io/Simpson-Says/Images/Clouds.jpg");
+  font-family: "Rock Salt", cursive;
 }
 
 .App {
   text-align: center;
   width: 100%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
-.navbar {
-  margin: 0;
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-family: Roboto;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  width: 400px;
+  margin-right: 250px;
+}
+
+nav a {
+  color: #222;
+  text-decoration: none;
+}
+
+.animated {
+  display: flex;
+  margin-left: 250px;
+  align-items: center;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  background: #3ac8ff;
+  color: #ffffff;
+  border-bottom: 1px solid #000000;
+  align-items: center;
+  height: 130px;
+}
+
+.nav-content h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+/* .navbar {
+  /* margin: 0;
   padding: 0;
   height: 64px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -40,14 +95,25 @@ body {
   justify-content: flex-start;
   align-items: center;
   background-color: #fff738;
-}
+  height: 80px; */
+/*
+  width: 100%;
+  justify-content: space-around;
+  background-color: #3ac8ff;
+  border-bottom: none;
+  display: flex;
+  background: #ffd90f;
+  color: #ffffff;
+  border-bottom: 1px solid #000000;
+} 
+*/
 
-.navbar > li > a {
+/* .navbar > li > a {
   color: #4285f4;
   text-decoration: none;
   padding: 24px;
   height: 16px;
-}
+} */
 
 .navbar > li > a.activeNavButton {
   background-color: #4285f4;
@@ -79,8 +145,21 @@ body {
 input {
   padding: 25px;
   border-radius: 5px;
-  margin-left: 10px;
+  margin: 10px 0;
   text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  color: #fff;
+  background-color: #ff7c8e;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-family: Roboto;
 }
 
 /* .App-logo {
