@@ -9,7 +9,8 @@ class Register extends React.Component {
     this.state = {
       credentials: {
         username: "",
-        password: ""
+        password: "",
+        role: "user"
       }
     };
   }
@@ -27,7 +28,8 @@ class Register extends React.Component {
   register = e => {
     e.preventDefault();
     this.props.register(this.state.credentials);
-    this.setState({ username: "", password: "" });
+    console.log(this.state.credentials);
+    this.setState({ username: "", password: "", role: this.state.role });
   };
 
   render() {
@@ -48,6 +50,13 @@ class Register extends React.Component {
             placeholder="Enter PASSWORD here"
             name="password"
             value={this.state.credentials.password}
+            onChange={this.handleChange}
+          />
+          <input
+            type="text"
+            placeholder="Enter ROLE here"
+            name="username"
+            value={this.state.credentials.role}
             onChange={this.handleChange}
           />
           <button>Click here to register, Man!</button>
