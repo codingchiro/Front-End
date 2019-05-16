@@ -31,13 +31,13 @@ class App extends React.Component {
               <a href="https://codingchiro.github.io/Simpson-Says/index.html">
                 Home
               </a>
-              <a href="https://codingchiro.github.io/Simpson-Says/login.html">
+              <Link to="https://vigorous-mcclintock-bf9e4a.netlify.com/login">
                 Login In
-              </a>
+              </Link>
               <a href="https://codingchiro.github.io/Simpson-Says/aboutus.html">
                 About Us
               </a>
-              <a href="#">Sign Up</a>
+              <Link to="/register">Sign Up</Link>
             </nav>
             {/* <!-- end nav --> */}
           </div>
