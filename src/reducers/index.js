@@ -4,7 +4,10 @@ import {
   LOGIN_FAILURE,
   REGISTER_START,
   REGISTER_SUCCESS,
-  REGISTER_FAILURE
+  REGISTER_FAILURE,
+  FETCHING_USER,
+  USER_FETCH_SUCCESS,
+  USER_FETCH_FAILURE
 } from "../actions";
 
 const initialState = {
@@ -14,7 +17,11 @@ const initialState = {
   isLoggingIn: false,
   isRegistering: false,
   registeringError: "",
-  loginError: ""
+  loginError: "",
+  id: "",
+  username: "",
+  password: "",
+  role: ""
 };
 
 const reducer = (state = initialState, action) => {
@@ -57,6 +64,25 @@ const reducer = (state = initialState, action) => {
         ...state,
         registeringError: "registration failed",
         isRegistering: false
+      };
+    }
+    case FETCHING_USER: {
+      return {
+        ...state,
+        error: ""
+      };
+    }
+    case USER_FETCH_SUCCESS: {
+      return {
+        ...state,
+        user: action.payload,
+        error: ""
+      };
+    }
+    case USER_FETCH_FAILURE: {
+      return {
+        ...state,
+        error: action.payload
       };
     }
     default:

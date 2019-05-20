@@ -60,6 +60,14 @@ nav a {
   text-decoration: none;
 }
 
+.admin-span {
+  color: #222;
+}
+
+.user {
+  color: #222;
+}
+
 .animated {
   display: flex;
   margin-left: 250px;

@@ -54,7 +54,7 @@ class Register extends React.Component {
           <input
             type="text"
             placeholder="Enter ROLE here"
-            name="username"
+            name="role"
             value={this.state.credentials.role}
             onChange={this.handleChange}
           />
