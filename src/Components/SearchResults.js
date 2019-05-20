@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default function SearchResults(props) { 
-    // const results = this.props.searchinput
-  return (
-    <div>
-      <ul>
-          
-      </ul>
+
+export default class SearchResults extends Component {
+  render() {
+    return (
+      <div>
+        <ul>
+          {this.props.quotes};
+        </ul>
     </div>
-  )
+    )
+  }
+
 }
+
+
+  

@@ -1,30 +1,50 @@
 import React, { Component } from 'react'
-import SearchResults from './SearchResults'
+import axios from 'axios'
+import SearchResults from './SearchResults';
+
 
 export default class Search extends Component {
     state={
-        searchinput:"",
+        quotes: [],
+        search: "",
     }
+    
     handleInput = e => 
     this.setState({ [e.target.name]: e.target.value });
 
-    submitHandler = event => event.preventDefault;
+    submitSearch = e => {
+      e.preventDefault();
+      return (
+      <SearchResults
+        searchInput={this.search} />
+        )
+    };
+
+    componentDidMount(){
+      axios
+      .post("https://simpson-says-backend.herokuapp.com/users/search"
+      )
+      .then(response => {
+        this.setState(() => ({ quotes: response.data }));
+      })
+      .catch(error => {
+        console.error('DOH!', error);
+      })
+    }
 
   render() {
     return (
       <div>
         <input type="text"
-              value={this.searchinput}
+              name="search"
+              value={this.search}
               onChange={this.handleInput}
               className="searchInput"
               placeholder="Search"></input>
-        <button 
+        <button onClick={this.submitSearch}
                 className="Searchbutton"
                 type="submit">Search Quotes</button>
                 
-      <div className="searchResults">
-        <SearchResults searchinput= {this.state.searchinput}></SearchResults>
-      </div>
       </div>
     )
   }
